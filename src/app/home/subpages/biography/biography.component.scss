@@ -1,0 +1,40 @@
+.container {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px){
+    .col-md-7 {
+        padding-left: 40px;
+    }
+}
+
+.nav-item.active {
+    background-color: #1d327a;
+    color: white;
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.tab-content > .tab-pane {
+    display: block;
+}
+
+.nav {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tab-content {
+    font-size: 12px;
+}
+
+hr {
+    border-color: #1d327a;
+}

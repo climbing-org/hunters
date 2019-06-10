@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xl-12">
+        <h2 class="page-header">
+            Таблица клубов
+        </h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Таблица клубов</li>
+        </ol>
+    </div>
+</div>
+
+
+<ng2-smart-table [settings]="settings" [source]="source"
+                 (userRowSelect)="select($event)"
+                 (deleteConfirm)="onDeleteConfirm($event)"
+></ng2-smart-table>

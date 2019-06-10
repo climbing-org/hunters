@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-xl-12">
+        <h2 class="page-header">
+            Статичная страница
+        </h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Статичная страница</li>
+        </ol>
+    </div>
+</div>
+<fieldset class="form-group">
+    <label>Заголовок</label>
+    <input class="form-control" [ngClass]="{'is-invalid': !staticPage.name}"  [(ngModel)]="staticPage.name">
+    <div class="invalid-feedback" *ngIf="!staticPage.name">
+        Не может быть пустым
+    </div>
+</fieldset>
+<fieldset class="form-group">
+<!--    <label>Content</label>-->
+<!--    <input class="form-control" [(ngModel)]="staticPage.content">-->
+    <editor apiKey="dzvo3quc6hbfakjcuawrspp6ylmuufnpkewhj8c3qm8lmwdv" [(ngModel)]="staticPage.content" [init]="{
+          plugins: 'print preview fullpage  searchreplace autolink directionality  visualblocks visualchars fullscreen image link media  codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount   imagetools textpattern help  code   ',
+          toolbar: 'formatselect | bold italic strikethrough forecolor backcolor   | link image media  | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat | addcomment',
+          image_advtab: true,
+          content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tiny.cloud/css/codepen.min.css'
+          ],
+          language: 'ru',
+          language_url : '/assets/i18n/ru.js',
+          importcss_append: true,
+          height: 400,
+          template_cdate_format: '[CDATE: %m/%d/%Y : %H:%M:%S]',
+          template_mdate_format: '[MDATE: %m/%d/%Y : %H:%M:%S]',
+          image_caption: true,
+          spellchecker_dialog: true,
+          images_upload_url: 'https://androidios.kz:8000/api/v1/tinymce-upload/',
+          images_upload_base_path: 'https://androidios.kz:8000',
+          spellchecker_whitelist: ['Ephox', 'Moxiecode'],
+          tinycomments_mode: 'embedded',
+          content_style: '.mce-annotation { background: #fff0b7; } .tc-active-annotation {background: #ffe168; color: black; }'
+}"></editor>
+</fieldset>
+<div class="row">
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO хэштег</label>
+            <input class="form-control" [(ngModel)]="staticPage.seo_hashtag">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO заголовок</label>
+            <input class="form-control" [(ngModel)]="staticPage.seo_title">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO ключевые слова</label>
+            <input class="form-control" [(ngModel)]="staticPage.seo_keywords">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO описание</label>
+            <input class="form-control" [(ngModel)]="staticPage.seo_description">
+        </fieldset>
+    </div>
+</div>
+
+
+<button type="submit" class="btn btn-secondary" (click)="submit()">Сохранить</button>

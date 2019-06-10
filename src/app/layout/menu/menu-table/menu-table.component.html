@@ -1,0 +1,114 @@
+<div>
+<!--    <app-page-header [heading]="'Charts'" [icon]="'fa-bar-chart-o'"></app-page-header>-->
+    <div class="row">
+        <div class="col-xl-12">
+            <h2 class="page-header">
+                Таблица Меню
+            </h2>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active">Header</li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" role="tablist"
+                 cdkDropList
+                 #todoList="cdkDropList"
+                 [cdkDropListData]="menu"
+                 [cdkDropListConnectedTo]="[doneList]"
+                 (cdkDropListDropped)="drop($event)"
+            >
+                <div *ngFor="let m of menu" cdkDrag>
+                    <ng-container *ngIf="m.header">
+                        <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                data-toggle="list" role="tab" (click)="selectedMenu1=m">
+                            <label>{{m.name}}</label>
+                            <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
+                        </button>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="list-group" role="tablist"
+                 cdkDropList
+                 #doneList="cdkDropList"
+                 [cdkDropListData]="selectedMenu1?.childs"
+                 [cdkDropListConnectedTo]="[todoList]"
+                 (cdkDropListDropped)="drop($event)"
+            >
+                <div *ngFor="let m of selectedMenu1?.childs" cdkDrag>
+                    <ng-container *ngIf="m.header">
+                        <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                data-toggle="list" role="tab" (click)="selectedMenu2=m">
+                            <label>{{m.name}}</label>
+                            <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
+                        </button>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="list-group" role="tablist">
+                <ng-container *ngFor="let m of selectedMenu2?.childs">
+                    <ng-container *ngIf="m.header">
+                        <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                data-toggle="list" role="tab">
+                            <label>{{m.name}}</label>
+                            <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
+                        </button>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+
+    </div>
+
+<!--    <button type="submit" class="btn btn-secondary" (click)="edit(selectedMenu1)">Изменить выбранное меню</button>-->
+    <br/>
+    <br/>
+
+
+    <div class="row">
+        <div class="col-xl-12">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active">Footer</li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" role="tablist">
+                <ng-container *ngFor="let m of menu">
+                    <ng-container *ngIf="m.footer">
+                        <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                data-toggle="list" role="tab" (click)="selectedMenu3=m">
+                            <label>{{m.name}}</label>
+                            <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
+                        </button>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+<!--        <div class="col-2">-->
+
+<!--        </div>-->
+        <div class="col-4">
+            <div class="tab-content">
+                <div class="list-group" role="tablist">
+                    <ng-container *ngFor="let m of selectedMenu3?.childs">
+                        <li class="list-group-item d-flex justify-content-between align-items-center" data-toggle="list" role="tab">
+                            <label>{{m.name}}</label>
+                            <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
+                        </li>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <button type="submit" class="btn btn-secondary" (click)="edit(selectedMenu2)">Изменить выбранное меню</button>-->
+</div>

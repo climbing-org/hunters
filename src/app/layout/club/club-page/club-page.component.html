@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="col-xl-12">
+        <h2 class="page-header">
+            Страница клуба
+        </h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Страница клуба</li>
+        </ol>
+    </div>
+</div>
+<fieldset class="form-group">
+    <label>Заголовок</label>
+    <input class="form-control" [ngClass]="{'is-invalid': !club.name}" [(ngModel)]="club.name">
+    <div class="invalid-feedback" *ngIf="!club.name">
+        Не может быть пустым
+    </div>
+</fieldset>
+<fieldset class="form-group">
+    <!--    <label>Content</label>-->
+    <!--    <input class="form-control" [(ngModel)]="staticPage.content">-->
+    <editor apiKey="dzvo3quc6hbfakjcuawrspp6ylmuufnpkewhj8c3qm8lmwdv" [(ngModel)]="club.content" [init]="{
+          plugins: 'print preview fullpage  searchreplace autolink directionality  visualblocks visualchars fullscreen image link media  codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount   imagetools textpattern help  code   ',
+          toolbar: 'formatselect | bold italic strikethrough forecolor backcolor   | link image media  | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent | removeformat | addcomment',
+          image_advtab: true,
+          content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tiny.cloud/css/codepen.min.css'
+          ],
+          language: 'ru',
+          language_url : '/assets/i18n/ru.js',
+          importcss_append: true,
+          height: 400,
+          template_cdate_format: '[CDATE: %m/%d/%Y : %H:%M:%S]',
+          template_mdate_format: '[MDATE: %m/%d/%Y : %H:%M:%S]',
+          image_caption: true,
+          spellchecker_dialog: true,
+          images_upload_url: 'https://androidios.kz:8000/api/v1/tinymce-upload/',
+          images_upload_base_path: 'https://androidios.kz:8000',
+          spellchecker_whitelist: ['Ephox', 'Moxiecode'],
+          tinycomments_mode: 'embedded',
+          content_style: '.mce-annotation { background: #fff0b7; } .tc-active-annotation {background: #ffe168; color: black; }'
+}"></editor>
+</fieldset>
+<div class="row">
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO хэштег</label>
+            <input class="form-control" [(ngModel)]="club.seo_hashtag">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO заголовок</label>
+            <input class="form-control" [(ngModel)]="club.seo_title">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO ключевые слова</label>
+            <input class="form-control" [(ngModel)]="club.seo_keywords">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO описание</label>
+            <input class="form-control" [(ngModel)]="club.seo_description">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>Дата начала</label>
+            <div class="input-group datepicker-input">
+                <input class="form-control" placeholder="yyyy-mm-dd"
+                       name="dp" [(ngModel)]="date_from" ngbDatepicker #d1="ngbDatepicker">
+                <button class="input-group-addon" (click)="d1.toggle()" type="button">
+                    <!-- <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/> -->
+                    <span class="fa fa-calendar"></span>
+                </button>
+            </div>
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>Дата конца</label>
+            <div class="input-group datepicker-input">
+                <input class="form-control" placeholder="yyyy-mm-dd"
+                       name="dp" [(ngModel)]="date_to" ngbDatepicker #d2="ngbDatepicker">
+                <button class="input-group-addon" (click)="d2.toggle()" type="button">
+                    <!-- <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/> -->
+                    <span class="fa fa-calendar"></span>
+                </button>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<a (click)="inputFile.click()" style="cursor: pointer; color: #007bff; margin-right: 10px;">
+    <i class="fa fa-paperclip"></i>
+    Изображения клуба
+</a>
+<br>
+<div *ngIf="loading" style="width: 50px;height: 50px;">
+    <div class="loader">Loading...</div>
+</div>
+<span *ngIf="file">
+        <i class="fa green fa-check" style="color: green"></i>
+    {{file.name}}
+    <!--        <i class="fa fa-remove" style="color: red"></i>-->
+  </span>
+<input #inputFile type="file" style="display: none">
+
+<br>
+<br>
+
+<button type="submit" class="btn btn-secondary" (click)="submit()">Сохранить</button>

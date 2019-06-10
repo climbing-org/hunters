@@ -1,0 +1,48 @@
+@media (min-width: 400px) {
+  .container {
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    //max-width: 730px;
+    max-width: 1140px;
+  }
+}
+//61.6%
+
+.main {
+  //font: 12pt Calibri, Arial, Helvetica, sans-serif; /* Øðèôò íà âåá-ñòðàíèöå */
+  //background: black; /* Öâåò ôîíà */
+  background-image: url('/assets/home/fon-new.png');
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: inherit;
+  font-family: 'Open Sans Light', 'Open Sans';
+  //position: relative;
+  //margin: 0; /* Óáèðàåì îòñòóïû */
+  //background-attachment: fixed;
+  //background-position:center;
+  //background-size: cover;
+}
+

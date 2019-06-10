@@ -1,0 +1,70 @@
+.vertical-line {
+  border-right: 1px solid;
+  border-color: white;
+}
+
+//footer {
+//  border-radius: 50px 50px 0 0;
+//  background: white;
+//}
+
+.main {
+    background: #2b5205;
+    color: white;
+}
+
+.heading {
+  font-size: 13px;
+  //color: #1d3279;
+    font-weight: 600;
+}
+
+.subheading {
+  font-size: 12px;
+  color: #bec5dd;
+}
+
+.copyright-block {
+  padding-left: 70px;
+}
+
+.copyright {
+  font-size: 17px;
+}
+
+.copyright-description {
+  font-size: 12px;
+}
+
+.ins {
+  margin: 0;
+}
+
+i.fa.fa-instagram {
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.7em 0.8em;
+    background-color: #694505;
+    color: white;
+
+}
+
+.list-inline {
+  margin-left: -10px;
+}
+
+.mb-4 {
+    margin-bottom: 1rem !important;
+    margin-top: 1.5rem;
+}
+
+.p-subheading {
+    margin-bottom: 0;
+}
+
+@media (max-width: 500px){
+    .copyright-block {
+        padding-left: 0 !important;
+    }
+}

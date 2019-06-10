@@ -1,0 +1,348 @@
+//@import '../../@theme/styles/themes';
+//
+//@include nb-install-component() {
+//  .calendars-container {
+//    margin-top: 2rem;
+//  }
+//
+//  h2 {
+//    font-size: nb-theme(font-size-xlg);
+//    text-align: center;
+//  }
+//
+//  .nebular-calendar {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    margin-bottom: 3rem;
+//  }
+//}
+
+@media (min-width: 768px){
+    .col-md-8.my {
+        flex: 0 0 61.66666667%;
+        max-width: 61.66666667%;
+    }
+
+    .col-md-4.my {
+        flex: 0 0 38.33333333%;
+        max-width: 38.33333333%;
+    }
+}
+
+@media (max-width: 500px){
+    :host ::ng-deep nb-card {
+        margin-top: 20px !important;
+    }
+    .ratings {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        .head {
+            margin-left: 10px !important;
+        }
+        table {
+            //table-layout: fixed;
+        }
+    }
+    .col-md-4.my.events {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 40px !important;
+        .event-content {
+            margin-top: 0 !important;
+        }
+    }
+    .news-block {
+        margin-bottom: 30px !important;
+    }
+    .col-md-4.my.associates {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .news-event {
+        margin-bottom: 25px !important;
+    }
+}
+
+.bg-white {
+    margin-top: 15px;
+}
+
+.col-md-4.my.events {
+    padding-left: 22px;
+}
+
+.col-md-4.my.associates {
+    padding-left: 22px;
+}
+
+
+
+.carousel {
+  padding-left: 0;
+    padding-right: 0;
+    img {
+        max-height: 550px;
+        min-width: auto;
+    }
+}
+:host ::ng-deep .carousel-item {
+  //border-radius: 0 0 50px;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .nebular-calendar {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+.blue {
+  background-color: #2b5205;
+  padding: 3px;
+  color: white;
+}
+
+
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+
+
+.row {
+  //margin-top: 25px;
+}
+
+.row:first-child {
+  margin-top: 0;
+}
+
+.my.calendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nebular-calendar {
+    .head {
+        h2 {
+            font-size: 26px;
+            color: #694505;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+    div.gallery-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div.gallery {
+        padding: 1px;
+        float: left;
+        width: 50%;
+    }
+    div.gallery img {
+        width: 100%;
+        //max-width: 50px;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+    div.gallery img:hover {
+        border: 1px solid #777;
+    }
+    h4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: #694505;
+        font-weight: 600;
+    }
+}
+
+.ratings {
+  text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    background-color: white;
+    padding-left: 30px;
+    .head {
+        margin-bottom: 20px;
+        height: 26px;
+        position: relative;
+        h2 {
+            font-size: 26px;
+            color: #694505;
+            font-weight: 300;
+            float: left;
+        }
+    }
+  .circular--landscape {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .circular--landscape img {
+    width: auto;
+    height: 100%;
+    margin-left: -10px;
+  }
+
+  .media-body {
+    margin-left: 11px;
+    color: #6c7293;
+    font-size: 12px;
+      font-weight: 600;
+  }
+  .place, .level, .rank, .direction {
+    font-size: 13px;
+      vertical-align: middle;
+  }
+    .blue {
+        padding: 5px;
+    }
+  .level {
+    color: #1c3279;
+  }
+  .rank {
+    color: #1c3279;
+      width: 20px;
+  }
+    .direction {
+        width: 20px;
+    }
+    .table-hover tbody tr:hover {
+        cursor: pointer;
+    }
+}
+
+.events {
+  //border-radius: 50px 0 0 50px;
+    margin-bottom: 60px;
+}
+.event-content {
+  padding-left: 30px;
+    padding-right: 30px;
+  margin-top: 30px;
+  //margin-bottom: 30px;
+  padding-top: 35px;
+  //padding-bottom: 25px;
+  background-color: #694505;
+  color: white;
+    height: 100%;
+  h2 {
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-bottom: 20px;
+      font-weight: 300;
+  }
+  .dates {
+    margin-bottom: 6px;
+      margin-left: -30px;
+    font-size: 13px;
+      font-weight: 300;
+  }
+    .dates-in {
+        padding-left: 30px;
+    }
+  .event-description {
+    font-size: 13px;
+      font-weight: 600;
+  }
+  .event-location {
+    font-size: 12px;
+      font-weight: 300;
+  }
+  article {
+    margin-bottom: 17px;
+  }
+}
+
+.news-block {
+    background-color: #2b5205;
+}
+
+
+.news {
+    margin-left: 30px;
+    padding-top: 35px;
+    color: white;
+    .head {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        height: 26px;
+        position: relative;
+        h2 {
+            font-size: 26px;
+            font-weight: 300;
+            float: left;
+        }
+        h4 {
+            font-size: 13px;
+            font-weight: 600;
+            //float: right;
+            position:absolute;
+            bottom:0;
+            right:0;
+            margin-bottom: 0;
+            padding-right: 12px;
+            color: #bec5dd;
+        }
+    }
+  .card-body {
+    .card-title {
+      font-size: 16px;
+        font-weight: 600;
+    }
+    .card-text {
+      font-size: 12px;
+        color: #bec5dd;
+    }
+  }
+}
+
+.news-event {
+  margin-bottom: 75px;
+    margin-top: -10px;
+}
+
+.associates-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    background-color: white;
+    color: #2b5205;
+    height: 100%;
+    h2 {
+        text-transform: uppercase;
+        font-size: 26px;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+    .dates {
+        margin-bottom: 6px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    .event-description {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .event-location {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    article {
+        margin-bottom: 17px;
+    }
+}

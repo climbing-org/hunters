@@ -1,0 +1,111 @@
+.blue {
+    background-color: #3391cf;
+    padding: 3px;
+    color: white;
+}
+
+.ratings {
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    //background-color: white;
+    //padding-left: 30px;
+    .head {
+        margin-bottom: 20px;
+        height: 26px;
+        position: relative;
+        h2 {
+            font-size: 26px;
+            color: #1c3279;
+            font-weight: 300;
+            float: left;
+        }
+        h4 {
+            font-size: 13px;
+            color: #1c3279;
+            font-weight: 600;
+            //float: right;
+            position:absolute;
+            bottom:0;
+            right:0;
+            margin-bottom: 0;
+            padding-right: 12px;
+        }
+    }
+    .circular--landscape {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .circular--landscape img {
+        width: auto;
+        height: 100%;
+        margin-left: -10px;
+    }
+
+    .media-body {
+        margin-left: 11px;
+        color: #6c7293;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .place, .level, .rank, .direction, .rang {
+        font-size: 13px;
+        vertical-align: middle;
+    }
+    .rang {
+        color: #1c3279;
+    }
+    .blue {
+        padding: 5px;
+    }
+    .level {
+        color: #1c3279;
+    }
+    .rank {
+        color: #1c3279;
+        width: 20px;
+    }
+    .direction {
+        width: 20px;
+    }
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: white;
+    }
+    thead {
+        background-color: #1d337a;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    ul {
+        width: 26%;
+        margin: auto;
+    }
+    thead tr th:first-child,
+    tbody tr td:first-child {
+        padding-left: 2rem;
+    }
+    thead tr th:last-child,
+    tbody tr td:last-child {
+        padding-right: 4rem;
+    }
+    .table-hover tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.075);
+        cursor: pointer;
+    }
+}
+
+:host ::ng-deep .page-item.active .page-link {
+    background-color: #3391cf;
+    border-color: #3391cf;
+}
+:host ::ng-deep .page-link {
+    color: #1d3279;
+}

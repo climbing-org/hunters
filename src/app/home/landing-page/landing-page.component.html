@@ -1,0 +1,346 @@
+<div class="bg-white">
+<div class="container">
+<div class="row">
+  <div class="col-md-8 my carousel">
+
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <img [src]="images[0]" alt="Random first slide">
+<!--        <div class="carousel-caption">-->
+<!--          <h3>First slide label</h3>-->
+<!--          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
+<!--        </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[1]" alt="Random second slide">
+<!--        <div class="carousel-caption">-->
+<!--          <h3>Second slide label</h3>-->
+<!--          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+<!--        </div>-->
+      </ng-template>
+    </ngb-carousel>
+
+  </div>
+
+  <div class="col-md-4 my calendar">
+    <div class="nebular-calendar">
+<!--      <h2>-->
+<!--        Selected date: {{ date | date }}-->
+<!--      </h2>-->
+<!--      <nb-calendar [(date)]="date" [boundingMonth]="true"></nb-calendar>-->
+        <div class="head">
+            <h2>Путевки</h2>
+        </div>
+
+        <div class="gallery-row">
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/kaban.png">
+                    <img src="/assets/home/kaban.png" alt="...">
+                </a>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/barsuk.png">
+                    <img src="/assets/home/barsuk.png" alt="...">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/lisa.png">
+                    <img src="/assets/home/lisa.png" alt="...">
+                </a>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/maral.png">
+                    <img src="/assets/home/maral.png" alt="...">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/kozel.png">
+                    <img src="/assets/home/kozel.png" alt="...">
+                </a>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/utka.png">
+                    <img src="/assets/home/utka.png" alt="...">
+                </a>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/teterev.png">
+                    <img src="/assets/home/teterev.png" alt="...">
+                </a>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="/assets/home/fazan.png">
+                    <img src="/assets/home/fazan.png" alt="...">
+                </a>
+            </div>
+        </div>
+
+        <br>
+        <div style="float: right">
+            <h4 routerLink="/home" style="cursor: pointer">Все события &nbsp;&nbsp;&nbsp;&nbsp;></h4>
+        </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-8 my ratings">
+      <div class="head">
+          <h2>Рейтинги</h2>
+      </div>
+    <table class="table table-striped table-borderless table-hover">
+      <tbody>
+      <tr routerLink="/home/biography">
+        <td>
+          <div class="media">
+            <div class="circular--landscape">
+              <img src="/assets/test/art1.jpg" class="mr-3" alt="...">
+            </div>
+          <div class="media-body">
+            <b>
+            Алишер <br/>
+            Жумахмет
+            </b>
+          </div>
+        </div>
+        </td>
+        <td class="place">
+          <span class="blue">Скала</span>
+        </td>
+        <td class="level">КМС</td>
+        <td class="rank">1050</td>
+          <td class="direction"><</td>
+      </tr>
+      <tr routerLink="/home/biography">
+        <td>
+          <div class="media">
+            <div class="circular--landscape">
+              <img src="/assets/test/art1.jpg" class="mr-3" alt="...">
+            </div>
+            <div class="media-body">
+              <b>
+                Алишер <br/>
+                Жумахмет
+              </b>
+            </div>
+          </div>
+        </td>
+        <td class="place">
+          <span class="blue">Скала</span>
+        </td>
+        <td class="level">КМС</td>
+        <td class="rank">1050</td>
+          <td class="direction"><</td>
+      </tr>
+      <tr routerLink="/home/biography">
+        <td>
+          <div class="media">
+            <div class="circular--landscape">
+              <img src="/assets/test/art1.jpg" class="mr-3" alt="...">
+            </div>
+            <div class="media-body">
+              <b>
+                Алишер <br/>
+                Жумахмет
+              </b>
+            </div>
+          </div>
+        </td>
+        <td class="place">
+          <span class="blue">Скала</span>
+        </td>
+        <td class="level">КМС</td>
+        <td class="rank">1050</td>
+          <td class="direction"><</td>
+      </tr>
+      <tr routerLink="/home/biography">
+        <td>
+          <div class="media">
+            <div class="circular--landscape">
+              <img src="/assets/test/art1.jpg" class="mr-3" alt="...">
+            </div>
+            <div class="media-body">
+              <b>
+                Алишер <br/>
+                Жумахмет
+              </b>
+            </div>
+          </div>
+        </td>
+        <td class="place">
+          <span class="blue">Скала</span>
+        </td>
+        <td class="level">КМС</td>
+        <td class="rank">1050</td>
+          <td class="direction"><</td>
+      </tr>
+      <tr routerLink="/home/biography">
+        <td>
+          <div class="media">
+            <div class="circular--landscape">
+              <img src="/assets/test/art1.jpg" class="mr-3" alt="...">
+            </div>
+            <div class="media-body">
+              <b>
+                Алишер <br/>
+                Жумахмет
+              </b>
+            </div>
+          </div>
+        </td>
+        <td class="place">
+          <span class="blue">Скала</span>
+        </td>
+        <td class="level">КМС</td>
+        <td class="rank">1050</td>
+          <td class="direction"><</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="col-md-4 my events">
+    <div class="event-content">
+      <h2>События</h2>
+      <div>
+        <article>
+            <div class="dates"><span class="dates-in blue">15/04/2019 - 25/04/2019</span></div>
+          <div class="event-description">Молодежный кубок РК.</div>
+          <div><span class="event-location">г. Алматы</span></div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="dates"><span class="dates-in blue">15/04/2019 - 25/04/2019</span></div>
+          <div class="event-description">Молодежный кубок РК.</div>
+          <div><span class="event-location">г. Алматы</span></div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="dates"><span class="dates-in blue">15/04/2019 - 25/04/2019</span></div>
+          <div class="event-description">Молодежный кубок РК.</div>
+          <div><span class="event-location">г. Алматы</span></div>
+        </article>
+      </div>
+      <div>
+        <article>
+          <div class="dates"><span class="dates-in blue">15/04/2019 - 25/04/2019</span></div>
+          <div class="event-description">Молодежный кубок РК.</div>
+          <div><span class="event-location">г. Алматы</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row news-event">
+  <div class="col-md-8 my news-block">
+    <div class="news">
+        <div class="head">
+            <h2>Новости</h2>
+            <h4>Архив новостей &nbsp;&nbsp;&nbsp;&nbsp;></h4>
+        </div>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="/assets/home/news1.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title"><b>Card title</b></h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="/assets/home/news2.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title"><b>Card title</b></h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="/assets/home/news3.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title"><b>Card title</b></h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--        <div class="card mb-3" *ngFor="let n of news">-->
+<!--            <div class="row no-gutters">-->
+<!--                <div class="col-md-3">-->
+<!--                    <img [src]="'https://androidios.kz:8000' + n.logo" class="card-img" alt="...">-->
+<!--                </div>-->
+<!--                <div class="col-md-9">-->
+<!--                    <div class="card-body">-->
+<!--                        <h5 class="card-title">{{n.name}}</h5>-->
+<!--&lt;!&ndash;                        <div class="card-text" [innerHTML]="n?.content"></div>&ndash;&gt;-->
+<!--                        <div class="card-text">{{n.short_description}}</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+  </div>
+
+  <div class="col-md-4 my associates">
+    <div class="associates-content">
+      <h2>Анонс мероприятий</h2>
+<!--      <article *ngFor="let e of events">-->
+<!--        <div class="event-description">{{e.name}}</div>-->
+<!--        <div><span class="event-location">{{e.date_from | date:'d MMM'}} - {{e.date_to | date:'d MMM'}}</span></div>-->
+<!--      </article>-->
+      <article>
+        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
+        <div><span class="event-location">31 января - 3 февраля</span></div>
+      </article>
+      <article>
+        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
+        <div><span class="event-location">31 января - 3 февраля</span></div>
+      </article>
+      <article>
+        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
+        <div><span class="event-location">31 января - 3 февраля</span></div>
+      </article>
+      <article>
+        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
+        <div><span class="event-location">31 января - 3 февраля</span></div>
+      </article>
+      <article>
+        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
+        <div><span class="event-location">31 января - 3 февраля</span></div>
+      </article>
+      <article>
+        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
+        <div><span class="event-location">31 января - 3 февраля</span></div>
+      </article>
+    </div>
+  </div>
+</div>
+</div>
+
+<ngx-associates></ngx-associates>

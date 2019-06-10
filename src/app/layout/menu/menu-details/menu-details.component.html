@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-xl-12">
+        <h2 class="page-header">
+            Детали Меню
+        </h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Детали Меню</li>
+        </ol>
+    </div>
+</div>
+<fieldset class="form-group">
+    <label>Название меню</label>
+    <input class="form-control" [ngClass]="{'is-invalid': !menu.name || nameError}" [(ngModel)]="menu.name">
+    <div class="invalid-feedback" *ngIf="!menu.name">
+        Не может быть пустым
+    </div>
+    <div class="invalid-feedback" *ngIf="menu.name && nameError">
+        {{nameError}}
+    </div>
+</fieldset>
+<div class="form-group">
+    <label>Добавить в хэдер</label>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="" [(ngModel)]="menu.header">
+        </label>
+    </div>
+</div>
+<div class="form-group">
+    <label>Добавить в футер</label>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="" [(ngModel)]="menu.footer">
+        </label>
+    </div>
+</div>
+<div class="form-group">
+    <label>Родительское меню</label>
+    <select class="form-control" [(ngModel)]="menu.parent">
+        <option></option>
+        <option [value]="m.id" *ngFor="let m of menuIds">{{m.name}}</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Страница</label>
+    <select class="form-control" [(ngModel)]="menu.static_page">
+        <option></option>
+        <option [value]="sp.slug" *ngFor="let sp of staticPage">{{sp.name}}</option>
+    </select>
+</div>
+<div class="form-group">
+    <label>Рубрика</label>
+    <select class="form-control" [(ngModel)]="menu.rubric">
+        <option></option>
+        <option [value]="sp.slug" *ngFor="let sp of staticPage">{{sp.name}}</option>
+    </select>
+</div>
+
+<ngb-alert *ngIf="errorMessage" type="danger" (close)="close()">{{ errorMessage }}</ngb-alert>
+
+<button *ngIf="!slug" type="submit" class="btn btn-secondary" (click)="submit()">Сохранить</button>
+<button *ngIf="slug" type="submit" class="btn btn-secondary" (click)="submit()">Редактировать</button>
