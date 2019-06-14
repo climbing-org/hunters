@@ -13,6 +13,6 @@ export class UploadService {
       const headers = new HttpHeaders();
       headers.set('Accept', 'application/json');
 
-      return this.http.post( 'https://androidios.kz:8000/api/v1/tinymce-upload/', formData, { headers: headers });
+      return this.http.post( 'http://185.22.64.192:8000/api/v1/tinymce-upload/', formData, { headers: headers });
   }
 }

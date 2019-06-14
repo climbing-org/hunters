@@ -67,7 +67,7 @@ export class EventsPageComponent implements OnInit, AfterViewInit {
       this.dropdownSettings = {
           singleSelection: false,
           idField: 'id',
-          textField: 'first_name',
+          textField: 'email',
           selectAllText: 'Select All',
           unSelectAllText: 'UnSelect All',
           itemsShowLimit: 3,

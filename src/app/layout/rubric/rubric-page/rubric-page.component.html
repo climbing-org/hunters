@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-xl-12">
+        <h2 class="page-header">
+            Страница Рубрик
+        </h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Страница рубрик</li>
+        </ol>
+    </div>
+</div>
+<fieldset class="form-group">
+    <label>Заголовок</label>
+    <input class="form-control" [ngClass]="{'is-invalid': !rubric.name || nameError}" [(ngModel)]="rubric.name">
+    <div class="invalid-feedback" *ngIf="!rubric.name">
+        Не может быть пустым
+    </div>
+    <div class="invalid-feedback" *ngIf="rubric.name && nameError">
+        {{nameError}}
+    </div>
+</fieldset>
+<div class="row">
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO хэштег</label>
+            <input class="form-control" [(ngModel)]="rubric.seo_hashtag">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO заголовок</label>
+            <input class="form-control" [(ngModel)]="rubric.seo_title">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO ключевые слова</label>
+            <input class="form-control" [(ngModel)]="rubric.seo_keywords">
+        </fieldset>
+    </div>
+    <div class="col-md-6">
+        <fieldset class="form-group">
+            <label>SEO описание</label>
+            <input class="form-control" [(ngModel)]="rubric.seo_description">
+        </fieldset>
+    </div>
+</div>
+
+<ngb-alert *ngIf="errorMessage" type="danger" (close)="close()">{{ errorMessage }}</ngb-alert>
+
+<button *ngIf="!slug" type="submit" class="btn btn-secondary" (click)="submit()">Сохранить</button>
+<button *ngIf="slug" type="submit" class="btn btn-secondary" (click)="submit()">Редактировать</button>

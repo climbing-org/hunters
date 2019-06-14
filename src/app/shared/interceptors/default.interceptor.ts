@@ -45,7 +45,7 @@ export class DefaultInterceptor implements HttpInterceptor {
                   this.ss.logout();
                   this.router.navigateByUrl('/login');
               }
-              if (event.url !== 'https://androidios.kz:8000/api/v1/tinymce-upload/') {
+              if (event.url !== 'http://185.22.64.192:8000/api/v1/tinymce-upload/') {
                   if (req.method === 'DELETE') {
                       if (event && ((event.body && event.body.code === 0) || event.status === 204)) {
                           this.toastr.success('Успешно удалено', 'Успешно удалено!');
@@ -59,7 +59,7 @@ export class DefaultInterceptor implements HttpInterceptor {
                   }
                   if (req.method === 'POST') {
                       if (event && ((event.body && event.body.code === 0) || event.status === 204)) {
-                          if (event.url !== 'https://androidios.kz:8000/api/v1/login/') {
+                          if (event.url !== 'http://185.22.64.192:8000/api/v1/login/') {
                               this.toastr.success('Запрос прошел успешно', 'Успешно!');
                           }
                       } else {
@@ -99,6 +99,9 @@ export class DefaultInterceptor implements HttpInterceptor {
   }
 
   private injectJWTHeader(req: HttpRequest<any>): HttpRequest<any> {
+      // return req.clone({
+      //     headers: req.headers.set('Referrer Policy', `Origin`)
+      // });
       if (JWTHelper.getToken()) {
           return req.clone({
               headers: req.headers.set(headerJWT, `Token ${JWTHelper.getToken()}`)

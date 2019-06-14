@@ -1,6 +1,7 @@
 
 
 export default class Rubric {
+    parent: Rubric;
     name: string;
     slug: string;
     seo_hashtag: string;
@@ -10,4 +11,5 @@ export default class Rubric {
     content: string;
     author: string;
     created_at: Date;
+    pages_count: number;
 }

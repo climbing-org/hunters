@@ -16,8 +16,7 @@
                  cdkDropList
                  #todoList="cdkDropList"
                  [cdkDropListData]="menu"
-                 [cdkDropListConnectedTo]="[doneList]"
-                 (cdkDropListDropped)="drop($event)"
+                 (cdkDropListDropped)="drop($event, menu)"
             >
                 <div *ngFor="let m of menu" cdkDrag>
                     <ng-container *ngIf="m.header">
@@ -36,8 +35,7 @@
                  cdkDropList
                  #doneList="cdkDropList"
                  [cdkDropListData]="selectedMenu1?.childs"
-                 [cdkDropListConnectedTo]="[todoList]"
-                 (cdkDropListDropped)="drop($event)"
+                 (cdkDropListDropped)="drop($event, selectedMenu1?.childs)"
             >
                 <div *ngFor="let m of selectedMenu1?.childs" cdkDrag>
                     <ng-container *ngIf="m.header">
@@ -52,8 +50,12 @@
         </div>
 
         <div class="col-4">
-            <div class="list-group" role="tablist">
-                <ng-container *ngFor="let m of selectedMenu2?.childs">
+            <div class="list-group" role="tablist"
+                 cdkDropList
+                 #doneList2="cdkDropList"
+                 [cdkDropListData]="selectedMenu2?.childs"
+                 (cdkDropListDropped)="drop($event, selectedMenu2?.childs)">
+                <div *ngFor="let m of selectedMenu2?.childs" cdkDrag>
                     <ng-container *ngIf="m.header">
                         <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
                                 data-toggle="list" role="tab">
@@ -61,7 +63,7 @@
                             <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
                         </button>
                     </ng-container>
-                </ng-container>
+                </div>
             </div>
         </div>
 
@@ -81,8 +83,12 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <div class="list-group" role="tablist">
-                <ng-container *ngFor="let m of menu">
+            <div class="list-group" role="tablist"
+                 cdkDropList
+                 #doneList3="cdkDropList"
+                 [cdkDropListData]="menu"
+                 (cdkDropListDropped)="drop($event, menu)">
+                <div *ngFor="let m of menu" cdkDrag>
                     <ng-container *ngIf="m.footer">
                         <button type="button" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
                                 data-toggle="list" role="tab" (click)="selectedMenu3=m">
@@ -90,7 +96,7 @@
                             <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
                         </button>
                     </ng-container>
-                </ng-container>
+                </div>
             </div>
         </div>
 <!--        <div class="col-2">-->
@@ -98,13 +104,17 @@
 <!--        </div>-->
         <div class="col-4">
             <div class="tab-content">
-                <div class="list-group" role="tablist">
-                    <ng-container *ngFor="let m of selectedMenu3?.childs">
+                <div class="list-group" role="tablist"
+                     cdkDropList
+                     #doneList4="cdkDropList"
+                     [cdkDropListData]="selectedMenu3?.childs"
+                     (cdkDropListDropped)="drop($event, selectedMenu3?.childs)">
+                    <div *ngFor="let m of selectedMenu3?.childs" cdkDrag>
                         <li class="list-group-item d-flex justify-content-between align-items-center" data-toggle="list" role="tab">
                             <label>{{m.name}}</label>
                             <label><i class="fa fa-edit" (click)="edit(m)"></i>&nbsp;<i class="fa fa-trash" (click)="delete(m)"></i></label>
                         </li>
-                    </ng-container>
+                    </div>
                 </div>
             </div>
         </div>

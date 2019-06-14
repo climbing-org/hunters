@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UsersService } from '../../../shared/services/user.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DefaultInterceptor } from '../../../shared/interceptors/default.interceptor';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [ClubPageComponent],
@@ -21,7 +22,8 @@ import { DefaultInterceptor } from '../../../shared/interceptors/default.interce
     PageHeaderModule,
     FormsModule,
     EditorModule,
-      NgbModule
+      NgbModule,
+      NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [
     UploadService,

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { JWTHelper } from '../../../shared/helpers/jwt.helper';
+import User from '../../../shared/classes/user';
+import { SecurityService } from '../../../shared/services/security.service';
 
 @Component({
     selector: 'app-header',
@@ -10,8 +12,11 @@ import { JWTHelper } from '../../../shared/helpers/jwt.helper';
 })
 export class HeaderComponent implements OnInit {
     public pushRightClass: string;
+    user: User;
 
-    constructor(private translate: TranslateService, public router: Router) {
+    constructor(private translate: TranslateService,
+                public router: Router,
+                private ss: SecurityService) {
 
         this.router.events.subscribe(val => {
             if (
@@ -26,6 +31,8 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {
         this.pushRightClass = 'push-right';
+        this.user = this.ss.getUser();
+        console.log(this.user);
     }
 
     isToggled(): boolean {
@@ -45,6 +52,7 @@ export class HeaderComponent implements OnInit {
 
     onLoggedout() {
         JWTHelper.removeToken();
+        localStorage.removeItem('user');
         const redirectURL = '/login';
 
         this.router.navigateByUrl(redirectURL);

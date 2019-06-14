@@ -5,6 +5,7 @@ import { JWTHelper } from '../helpers/jwt.helper';
 import {tap} from 'rxjs/operators';
 import {GeneralHelper} from '../helpers/general.helper';
 import { Session } from '../classes/session';
+import User from '../classes/user';
 
 export interface LoginForm {
     email: string;
@@ -22,6 +23,8 @@ export class SecurityService {
 
   private session: Session = null;
   static session: Session = null;
+
+  private user: User = null;
 
   // Только для вызова из InitService.
   onBootstrap(): Session {
@@ -45,6 +48,16 @@ export class SecurityService {
     return this.session;
   }
 
+  getUser(): User {
+      if (!this.user) {
+          const userString = localStorage.getItem('user');
+          if (userString) {
+              this.user = JSON.parse(userString);
+          }
+      }
+      return this.user;
+  }
+
   // Alisher
     getToken() {
         return JWTHelper.getToken();
@@ -57,7 +70,7 @@ export class SecurityService {
   login(input: LoginForm): Observable<any> {
       console.log(input);
     return this.http
-      .post<Session>('https://androidios.kz:8000/api/v1/login/', input)
+      .post<Session>('http://185.22.64.192:8000/api/v1/login/', input)
       .pipe(
         // tap({
         //   next: () => GeneralHelper.reloadApp(),

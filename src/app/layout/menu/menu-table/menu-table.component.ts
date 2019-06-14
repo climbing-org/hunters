@@ -43,16 +43,32 @@ export class MenuTableComponent implements OnInit {
         });
     }
 
-    drop(event: CdkDragDrop<Menu[]>) {
+    drop(event: CdkDragDrop<Menu[]>, menu: Menu[]) {
       console.log(event);
-        if (event.previousContainer === event.container) {
-            moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-        } else {
-            transferArrayItem(event.previousContainer.data,
-                event.container.data,
-                event.previousIndex,
-                event.currentIndex);
-        }
+      console.log(menu);
+      const ids: number[] = [];
+      const temp = menu[event.currentIndex];
+        menu[event.currentIndex] = menu[event.previousIndex];
+        menu[event.previousIndex] = temp;
+        menu.forEach((m) => {
+            ids.push(m.id);
+        });
+        const body = {
+            ids: ids
+        };
+        this.menuService.setPriority(body).subscribe((res) => {
+            if (res['code'] !== 0) {
+                moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+            }
+            // if (event.previousContainer === event.container) {
+            //     moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+            // } else {
+            //     transferArrayItem(event.previousContainer.data,
+            //         event.container.data,
+            //         event.previousIndex,
+            //         event.currentIndex);
+            // }
+        });
     }
 
 }

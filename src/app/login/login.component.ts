@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
 
             if (!res && !res.data) { return; }
             JWTHelper.setToken(res.data.token);
+            localStorage.setItem('user', JSON.stringify(res.data.user));
 
             const redirectURL = '/admin/static-page-table';
 

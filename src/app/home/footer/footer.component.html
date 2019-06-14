@@ -11,29 +11,29 @@
 
       <!-- Grid column -->
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-<!--            <ng-container *ngIf="menu?.length && menu[0]">-->
-<!--                <h6 class="text-uppercase mb-4 heading">{{menu[0].name}}</h6>-->
-<!--                <p class="p-subheading" *ngFor="let m of menu[0].childs">-->
-<!--                    <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>-->
-<!--                </p>-->
-<!--            </ng-container>-->
-            <h6 class="text-uppercase mb-4 heading">Новости </h6>
-            <h6 class="text-uppercase mb-4 heading">Бронирование  </h6>
-            <h6 class="text-uppercase mb-4 heading">Календарь событий</h6>
-            <h6 class="text-uppercase mb-4 heading">Форум</h6>
-            <h6 class="text-uppercase mb-4 heading">Иностранным туристам</h6>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Организация охотничьих туров</a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Услуги переводчика</a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Лицензии/разрешения</a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Центр поддержки</a>
-            </p>
+            <ng-container *ngIf="menu?.length && menu[0]">
+                <h6 class="text-uppercase mb-4 heading">{{menu[0].name}}</h6>
+                <p class="p-subheading" *ngFor="let m of menu[0].childs">
+                    <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>
+                </p>
+            </ng-container>
+<!--            <h6 class="text-uppercase mb-4 heading">Новости </h6>-->
+<!--            <h6 class="text-uppercase mb-4 heading">Бронирование  </h6>-->
+<!--            <h6 class="text-uppercase mb-4 heading">Календарь событий</h6>-->
+<!--            <h6 class="text-uppercase mb-4 heading">Форум</h6>-->
+<!--            <h6 class="text-uppercase mb-4 heading">Иностранным туристам</h6>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Организация охотничьих туров</a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Услуги переводчика</a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Лицензии/разрешения</a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Центр поддержки</a>-->
+<!--            </p>-->
         </div>
       <!-- Grid column -->
 
@@ -41,106 +41,106 @@
 
       <!-- Grid column -->
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-<!--            <ng-container *ngIf="1; let index">-->
-<!--                <ng-container *ngIf="menu?.length && menu[index]">-->
-<!--                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <p class="p-subheading" *ngFor="let m of menu[index].childs">-->
-<!--                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>-->
-<!--                    </p>-->
-<!--                </ng-container>-->
-<!--            </ng-container>-->
-<!--            <ng-container *ngIf="2; let index">-->
-<!--                <ng-container *ngIf="menu?.length && menu[index]">-->
-<!--                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <p class="p-subheading" *ngFor="let m of menu[index].childs">-->
-<!--                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>-->
-<!--                    </p>-->
-<!--                </ng-container>-->
-<!--            </ng-container>-->
-            <h6 class="text-uppercase mb-4 heading">Рыбалка </h6>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Рыболовы </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Карта рыболова  </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Рыболовные хозяйства </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Общества/клубы/федерации/организации </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Рыболовные снасти </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Календарь рыболова </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Лицензии/путевки/разрешения </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Информация для новичка </a>
-            </p>
+            <ng-container *ngIf="1; let index">
+                <ng-container *ngIf="menu?.length && menu[index]">
+                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <p class="p-subheading" *ngFor="let m of menu[index].childs">
+                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>
+                    </p>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="2; let index">
+                <ng-container *ngIf="menu?.length && menu[index]">
+                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <p class="p-subheading" *ngFor="let m of menu[index].childs">
+                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>
+                    </p>
+                </ng-container>
+            </ng-container>
+<!--            <h6 class="text-uppercase mb-4 heading">Рыбалка </h6>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Рыболовы </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Карта рыболова  </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Рыболовные хозяйства </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Общества/клубы/федерации/организации </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Рыболовные снасти </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Календарь рыболова </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Лицензии/путевки/разрешения </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Информация для новичка </a>-->
+<!--            </p>-->
         </div>
 
         <hr class="w-100 clearfix d-md-none">
 
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 vertical-line">
-<!--            <ng-container *ngIf="3; let index">-->
-<!--                <ng-container *ngIf="menu?.length && menu[index]">-->
-<!--                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <p class="p-subheading" *ngFor="let m of menu[index].childs">-->
-<!--                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>-->
-<!--                    </p>-->
-<!--                </ng-container>-->
-<!--            </ng-container>-->
-<!--            <ng-container *ngIf="4; let index">-->
-<!--                <ng-container *ngIf="menu?.length && menu[index]">-->
-<!--                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>-->
-<!--                    <p class="p-subheading-last" *ngFor="let m of menu[index].childs">-->
-<!--                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>-->
-<!--                    </p>-->
-<!--                </ng-container>-->
-<!--            </ng-container>-->
-            <h6 class="text-uppercase mb-4 heading">Охота </h6>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Охотники  </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Карта охотника </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Охотничьи общества/клубы </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Оружие  </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Охотничьи принадлежности </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Охотничьи собаки </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Ловчие птицы </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Тиры (стрельбища) </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Календарь охотника  </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Лицензии/разрешения на отстрел </a>
-            </p>
-            <p class="p-subheading">
-                <a href="#" class="subheading">Информация для новичка </a>
-            </p>
+            <ng-container *ngIf="3; let index">
+                <ng-container *ngIf="menu?.length && menu[index]">
+                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <p class="p-subheading" *ngFor="let m of menu[index].childs">
+                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>
+                    </p>
+                </ng-container>
+            </ng-container>
+            <ng-container *ngIf="4; let index">
+                <ng-container *ngIf="menu?.length && menu[index]">
+                    <h6 *ngIf="menu[index].static_page" [routerLink]="'/home/static-page/' + menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <h6 *ngIf="!menu[index].static_page" class="text-uppercase mb-4 font-weight-bold heading">{{menu[index].name}}</h6>
+                    <p class="p-subheading-last" *ngFor="let m of menu[index].childs">
+                        <a [routerLink]="'/home/static-page/' + m.static_page" class="subheading">{{m.name}}</a>
+                    </p>
+                </ng-container>
+            </ng-container>
+<!--            <h6 class="text-uppercase mb-4 heading">Охота </h6>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Охотники  </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Карта охотника </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Охотничьи общества/клубы </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Оружие  </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Охотничьи принадлежности </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Охотничьи собаки </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Ловчие птицы </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Тиры (стрельбища) </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Календарь охотника  </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Лицензии/разрешения на отстрел </a>-->
+<!--            </p>-->
+<!--            <p class="p-subheading">-->
+<!--                <a href="#" class="subheading">Информация для новичка </a>-->
+<!--            </p>-->
         </div>
 
       <!-- Grid column -->

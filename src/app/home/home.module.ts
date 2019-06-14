@@ -17,6 +17,8 @@ import { StaticPageComponent } from './subpages/static-page/static-page.componen
 import { NewsService } from '../shared/services/news.service';
 import { EventService } from '../shared/services/event.service';
 import { PageTitleComponent } from './subpages/page-title/page-title.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DefaultInterceptor } from '../shared/interceptors/default.interceptor';
 
 const ADMIN_COMPONENTS = [
   HomeComponent,
@@ -44,7 +46,7 @@ const ADMIN_COMPONENTS = [
         MenuService,
         StaticPageService,
         NewsService,
-        EventService
+        EventService,
     ],
     exports: [
         PageTitleComponent

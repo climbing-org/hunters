@@ -21,9 +21,9 @@ export class ClubPageComponent implements OnInit, AfterViewInit {
     loading = false;
 
     sportsmen: User[];
-    judges: User[];
+    trainers: User[];
     selectedSportsmen: User[] = [];
-    selectedJudges: User[] = [];
+    selectedTrainers: User[] = [];
     dropdownSettings = {};
 
     date_from: {year: number, month: number, day: number};
@@ -47,8 +47,8 @@ export class ClubPageComponent implements OnInit, AfterViewInit {
                       s.id = s['pk'];
                   }
               });
-              this.selectedJudges = this.club.judges ? this.club.judges : [];
-              this.selectedJudges.forEach((s) => {
+              this.selectedTrainers = this.club.trainers ? this.club.trainers : [];
+              this.selectedTrainers.forEach((s) => {
                   if (s['pk']) {
                       s.id = s['pk'];
                   }
@@ -59,15 +59,16 @@ export class ClubPageComponent implements OnInit, AfterViewInit {
           this.sportsmen = GeneralHelper.isEmpty(res) ? [] : res.data;
           console.log(this.sportsmen);
       });
-      this.usersService.list('judge').subscribe((res: {data: User[]}) => {
-          this.judges = GeneralHelper.isEmpty(res) ? [] : res.data;
-          console.log(this.judges);
+      this.usersService.list('trainer').subscribe((res: {data: User[]}) => {
+          this.trainers = GeneralHelper.isEmpty(res) ? [] : res.data;
+          this.trainers.forEach((t) => {
+          })
       });
 
       this.dropdownSettings = {
           singleSelection: false,
           idField: 'id',
-          textField: 'first_name',
+          textField: 'email',
           selectAllText: 'Select All',
           unSelectAllText: 'UnSelect All',
           itemsShowLimit: 3,
@@ -94,9 +95,9 @@ export class ClubPageComponent implements OnInit, AfterViewInit {
         this.selectedSportsmen.forEach((s) => {
             this.club.sportsmans.push(s.id);
         });
-        this.club.judges = [];
-        this.selectedJudges.forEach((s) => {
-            this.club.judges.push(s.id);
+        this.club.trainers = [];
+        this.selectedTrainers.forEach((s) => {
+            this.club.trainers.push(s.id);
         });
         if (this.slug) {
             this.clubService.update(this.slug, this.club).subscribe((res) => {

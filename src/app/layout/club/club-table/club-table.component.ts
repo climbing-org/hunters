@@ -47,9 +47,6 @@ export class ClubTableComponent implements OnInit {
               name: {
                   title: 'Имя'
               },
-              region: {
-                  title: 'Регион'
-              },
               city: {
                   title: 'Город'
               },

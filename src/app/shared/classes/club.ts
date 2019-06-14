@@ -9,15 +9,13 @@ export default class Club {
     seo_description: string;
     content: string;
     created_at: Date;
-    region: string;
     city: string;
     address: string;
     lat: number;
-    lng: number;
+    lon: number;
     working_hours: object;
     logo: string;
     sportsmans: any;
-    judges: any;
-    requests: number[];
+    trainers: any;
     author: string;
 }

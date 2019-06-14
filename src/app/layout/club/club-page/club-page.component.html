@@ -34,8 +34,8 @@
           template_mdate_format: '[MDATE: %m/%d/%Y : %H:%M:%S]',
           image_caption: true,
           spellchecker_dialog: true,
-          images_upload_url: 'https://androidios.kz:8000/api/v1/tinymce-upload/',
-          images_upload_base_path: 'https://androidios.kz:8000',
+          images_upload_url: 'http://185.22.64.192:8000/api/v1/tinymce-upload/',
+          images_upload_base_path: 'http://185.22.64.192:8000',
           spellchecker_whitelist: ['Ephox', 'Moxiecode'],
           tinycomments_mode: 'embedded',
           content_style: '.mce-annotation { background: #fff0b7; } .tc-active-annotation {background: #ffe168; color: black; }'
@@ -68,28 +68,44 @@
     </div>
     <div class="col-md-6">
         <fieldset class="form-group">
-            <label>Дата начала</label>
-            <div class="input-group datepicker-input">
-                <input class="form-control" placeholder="yyyy-mm-dd"
-                       name="dp" [(ngModel)]="date_from" ngbDatepicker #d1="ngbDatepicker">
-                <button class="input-group-addon" (click)="d1.toggle()" type="button">
-                    <!-- <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/> -->
-                    <span class="fa fa-calendar"></span>
-                </button>
-            </div>
+            <label>Спортсмены</label>
+            <br/>
+            <ng-multiselect-dropdown
+                [placeholder]="''"
+                [data]="sportsmen"
+                [(ngModel)]="selectedSportsmen"
+                [settings]="dropdownSettings"
+                (onSelect)="onItemSelect($event)"
+                (onSelectAll)="onSelectAll($event)"
+            >
+            </ng-multiselect-dropdown>
         </fieldset>
     </div>
     <div class="col-md-6">
         <fieldset class="form-group">
-            <label>Дата конца</label>
-            <div class="input-group datepicker-input">
-                <input class="form-control" placeholder="yyyy-mm-dd"
-                       name="dp" [(ngModel)]="date_to" ngbDatepicker #d2="ngbDatepicker">
-                <button class="input-group-addon" (click)="d2.toggle()" type="button">
-                    <!-- <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/> -->
-                    <span class="fa fa-calendar"></span>
-                </button>
-            </div>
+            <label>Тренера</label>
+            <br/>
+            <ng-multiselect-dropdown
+                [placeholder]="''"
+                [data]="trainers"
+                [(ngModel)]="selectedTrainers"
+                [settings]="dropdownSettings"
+                (onSelect)="onItemSelect($event)"
+                (onSelectAll)="onSelectAll($event)"
+            >
+            </ng-multiselect-dropdown>
+        </fieldset>
+    </div>
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <label>Город</label>
+            <input class="form-control" [(ngModel)]="club.city">
+        </fieldset>
+    </div>
+    <div class="col-md-8">
+        <fieldset class="form-group">
+            <label>Адрес</label>
+            <input class="form-control" [(ngModel)]="club.address">
         </fieldset>
     </div>
 </div>

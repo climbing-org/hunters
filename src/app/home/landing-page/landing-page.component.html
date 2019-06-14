@@ -224,93 +224,93 @@
             <h2>Новости</h2>
             <h4>Архив новостей &nbsp;&nbsp;&nbsp;&nbsp;></h4>
         </div>
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-3">
-            <img src="/assets/home/news1.png" class="card-img" alt="...">
-          </div>
-          <div class="col-md-9">
-            <div class="card-body">
-              <h5 class="card-title"><b>Как Казахстану заработать на трофейной охоте</b></h5>
-              <p class="card-text">Охота — вид активного туризма, наиболее зарегулированный государственными нормативами и с точки зрения популярной в наши дни «зеленой» морали кажущийся архаичным и бесперспективным.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-3">
-            <img src="/assets/home/news2.png" class="card-img" alt="...">
-          </div>
-          <div class="col-md-9">
-            <div class="card-body">
-              <h5 class="card-title"><b>Сколько стоит охотничий инстинкт в Казахстане</b></h5>
-              <p class="card-text">Почему амуниция для охоты в горах самая дорогая и как трофейная охота стала эффективной стратегией сохранения животного мира.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-3">
-            <img src="/assets/home/news3.png" class="card-img" alt="...">
-          </div>
-          <div class="col-md-9">
-            <div class="card-body">
-              <h5 class="card-title"><b>В Казахстане принят закон, меняющий правила охоты</b></h5>
-              <p class="card-text">В минувшую субботу в республике открылся очередной осенне-зимний охотничий сезон, который, в зависимости от вида животных и птиц, продолжится до 15 февраля 2019 года. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-<!--        <div class="card mb-3" *ngFor="let n of news">-->
-<!--            <div class="row no-gutters">-->
-<!--                <div class="col-md-3">-->
-<!--                    <img [src]="'https://androidios.kz:8000' + n.logo" class="card-img" alt="...">-->
-<!--                </div>-->
-<!--                <div class="col-md-9">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">{{n.name}}</h5>-->
-<!--&lt;!&ndash;                        <div class="card-text" [innerHTML]="n?.content"></div>&ndash;&gt;-->
-<!--                        <div class="card-text">{{n.short_description}}</div>-->
-<!--                    </div>-->
-<!--                </div>-->
+<!--      <div class="card mb-3">-->
+<!--        <div class="row no-gutters">-->
+<!--          <div class="col-md-3">-->
+<!--            <img src="/assets/home/news1.png" class="card-img" alt="...">-->
+<!--          </div>-->
+<!--          <div class="col-md-9">-->
+<!--            <div class="card-body">-->
+<!--              <h5 class="card-title"><b>Как Казахстану заработать на трофейной охоте</b></h5>-->
+<!--              <p class="card-text">Охота — вид активного туризма, наиболее зарегулированный государственными нормативами и с точки зрения популярной в наши дни «зеленой» морали кажущийся архаичным и бесперспективным.</p>-->
 <!--            </div>-->
+<!--          </div>-->
 <!--        </div>-->
+<!--      </div>-->
+<!--      <div class="card mb-3">-->
+<!--        <div class="row no-gutters">-->
+<!--          <div class="col-md-3">-->
+<!--            <img src="/assets/home/news2.png" class="card-img" alt="...">-->
+<!--          </div>-->
+<!--          <div class="col-md-9">-->
+<!--            <div class="card-body">-->
+<!--              <h5 class="card-title"><b>Сколько стоит охотничий инстинкт в Казахстане</b></h5>-->
+<!--              <p class="card-text">Почему амуниция для охоты в горах самая дорогая и как трофейная охота стала эффективной стратегией сохранения животного мира.</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="card mb-3">-->
+<!--        <div class="row no-gutters">-->
+<!--          <div class="col-md-3">-->
+<!--            <img src="/assets/home/news3.png" class="card-img" alt="...">-->
+<!--          </div>-->
+<!--          <div class="col-md-9">-->
+<!--            <div class="card-body">-->
+<!--              <h5 class="card-title"><b>В Казахстане принят закон, меняющий правила охоты</b></h5>-->
+<!--              <p class="card-text">В минувшую субботу в республике открылся очередной осенне-зимний охотничий сезон, который, в зависимости от вида животных и птиц, продолжится до 15 февраля 2019 года. </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+        <div class="card mb-3" *ngFor="let n of news">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img [src]="'http://185.22.64.192:8000' + n.logo" class="card-img" alt="...">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <h5 class="card-title">{{n.name}}</h5>
+<!--                        <div class="card-text" [innerHTML]="n?.content"></div>-->
+                        <div class="card-text">{{n.short_description}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 
   <div class="col-md-4 my associates">
     <div class="associates-content">
       <h2>Анонс мероприятий</h2>
-<!--      <article *ngFor="let e of events">-->
-<!--        <div class="event-description">{{e.name}}</div>-->
-<!--        <div><span class="event-location">{{e.date_from | date:'d MMM'}} - {{e.date_to | date:'d MMM'}}</span></div>-->
+      <article *ngFor="let e of events">
+        <div class="event-description">{{e.name}}</div>
+        <div><span class="event-location">{{e.date_from | date:'d MMM'}} - {{e.date_to | date:'d MMM'}}</span></div>
+      </article>
+<!--      <article>-->
+<!--        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>-->
+<!--        <div><span class="event-location">31 января - 3 февраля</span></div>-->
 <!--      </article>-->
-      <article>
-        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
-        <div><span class="event-location">31 января - 3 февраля</span></div>
-      </article>
-      <article>
-        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
-        <div><span class="event-location">31 января - 3 февраля</span></div>
-      </article>
-      <article>
-        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
-        <div><span class="event-location">31 января - 3 февраля</span></div>
-      </article>
-      <article>
-        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
-        <div><span class="event-location">31 января - 3 февраля</span></div>
-      </article>
-      <article>
-        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
-        <div><span class="event-location">31 января - 3 февраля</span></div>
-      </article>
-      <article>
-        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>
-        <div><span class="event-location">31 января - 3 февраля</span></div>
-      </article>
+<!--      <article>-->
+<!--        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>-->
+<!--        <div><span class="event-location">31 января - 3 февраля</span></div>-->
+<!--      </article>-->
+<!--      <article>-->
+<!--        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>-->
+<!--        <div><span class="event-location">31 января - 3 февраля</span></div>-->
+<!--      </article>-->
+<!--      <article>-->
+<!--        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>-->
+<!--        <div><span class="event-location">31 января - 3 февраля</span></div>-->
+<!--      </article>-->
+<!--      <article>-->
+<!--        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>-->
+<!--        <div><span class="event-location">31 января - 3 февраля</span></div>-->
+<!--      </article>-->
+<!--      <article>-->
+<!--        <div class="event-description"><b>Молодежный кубок РК. г. Алматы</b></div>-->
+<!--        <div><span class="event-location">31 января - 3 февраля</span></div>-->
+<!--      </article>-->
     </div>
   </div>
 </div>

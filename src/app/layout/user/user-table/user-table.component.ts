@@ -56,7 +56,7 @@ export class UserTableComponent implements OnInit {
                   type: 'html',
                   valuePrepareFunction: (avatar) => {
                       if (avatar) {
-                          return `<img src="https://androidios.kz:8000${avatar}" alt="...">`;
+                          return `<img src="http://185.22.64.192:8000${avatar}" alt="...">`;
                       }
                       return '';
                   },

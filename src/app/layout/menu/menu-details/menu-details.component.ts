@@ -4,6 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MenuService } from '../../../shared/services/menu.service';
 import { StaticPageService } from '../../../shared/services/static-page.service';
 import StaticPage from '../../../shared/classes/static-page';
+import Rubric from '../../../shared/classes/rubric';
+import { RubricService } from '../../../shared/services/rubric.service';
 
 @Component({
   selector: 'app-menu-details',
@@ -18,13 +20,15 @@ export class MenuDetailsComponent implements OnInit {
     slug: string;
     menuIds: {name: string, id: number}[] = [];
     staticPage: StaticPage[] = [];
+    rubrics: Rubric[] = [];
 
     // @ViewChild('staticPage') staticPage: ElementRef;
 
   constructor(private activeRoute: ActivatedRoute,
               private router: Router,
               private menuService: MenuService,
-              private staticPageService: StaticPageService) { }
+              private staticPageService: StaticPageService,
+              private rubricService: RubricService) { }
 
   ngOnInit() {
       this.slug = this.activeRoute.snapshot.params['id'];
@@ -65,6 +69,9 @@ export class MenuDetailsComponent implements OnInit {
       });
       this.staticPageService.list().subscribe((res: {data: StaticPage[]}) => {
           this.staticPage = res.data;
+      });
+      this.rubricService.list().subscribe((res: {data: Rubric[]}) => {
+          this.rubrics = res.data;
       });
   }
 

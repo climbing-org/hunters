@@ -70,6 +70,29 @@
         </div>
 
         <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('rubric')">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>Рубрики</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'rubric'">
+                <ul class="submenu">
+                    <li>
+                        <a routerLink="/admin/rubric-table">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>Таблица рубрик</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/admin/rubric-page">
+                            <i class="fa fa-monument"></i>&nbsp;
+                            <span>Новые рубрики</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        <div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('events')">
                 <i class="fa fa-plus"></i>&nbsp;
                 <span>Мероприятия</span>

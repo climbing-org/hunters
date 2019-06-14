@@ -15,12 +15,15 @@ import { DefaultInterceptor } from '../../shared/interceptors/default.intercepto
 @NgModule({
     imports: [CommonModule, NewStaticPageRoutingModule, PageHeaderModule, FormsModule, EditorModule],
     declarations: [NewStaticPageComponent],
-    providers: [MenuService, StaticPageService,
+    providers: [
+        MenuService,
+        StaticPageService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: DefaultInterceptor,
             multi: true
-        },],
+        },
+    ],
 })
 export class NewStaticPageModule {
 }

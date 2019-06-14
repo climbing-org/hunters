@@ -42,6 +42,9 @@ const routes: Routes = [
             { path: 'profile-judge', loadChildren: './profile/profile-judge/profile-judge.module#ProfileJudgeModule' },
             { path: 'profile-trainer', loadChildren: './profile/profile-trainer/profile-trainer.module#ProfileTrainerModule' },
             { path: 'my-profile', loadChildren: './profile/my-profile/my-profile.module#MyProfileModule' },
+            { path: 'rubric-page', loadChildren: './rubric/rubric-page/rubric-page.module#RubricPageModule' },
+            { path: 'rubric-table', loadChildren: './rubric/rubric-table/rubric-table.module#RubricTableModule' },
+            { path: 'rubric-page/:id', loadChildren: './rubric/rubric-page/rubric-page.module#RubricPageModule' },
         ]
     }
 ];

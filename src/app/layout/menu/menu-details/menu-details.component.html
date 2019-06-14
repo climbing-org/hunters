@@ -52,7 +52,7 @@
     <label>Рубрика</label>
     <select class="form-control" [(ngModel)]="menu.rubric">
         <option></option>
-        <option [value]="sp.slug" *ngFor="let sp of staticPage">{{sp.name}}</option>
+        <option [value]="r.slug" *ngFor="let r of rubrics">{{r.name}}</option>
     </select>
 </div>
 
